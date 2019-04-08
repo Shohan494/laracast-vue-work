@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-</head>
-<body>
-
-	<div id="root">
-		
-		<input type="text" id="input" v-model="message">
-
-	</div>
-	
-
-	<script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
-	<script type="text/javascript">
-		
+    <head>
+        <title>
+        </title>
+        <meta charset="utf-8">
+        </meta>
+    </head>
+    <body>
+        <div id="root">
+            <input id="input" type="text" v-model="message">
+                <p>
+                    Value binded is: {{message}}
+                </p>
+            </input>
+        </div>
+        <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+        /*
 		let data = {
 			message : "Hello Shohan!"
 		};
+		*/
 
 		new Vue ({
 
 			el: '#root',
-			data: data
+			data: {
+				message : "Hello Shohan!"
+			}
 		});
-
-
-
-	</script>
-</body>
+        </script>
+    </body>
 </html>
