@@ -10,8 +10,11 @@
         <div id="root">
             <input id="input" type="text" v-model="message">
                 <p>
-                    Value binded is: {{message}}
+                    Value binded is data = message: {{message}}
                 </p>
+                <ul>
+                	<li v-for="name in names" v-text="name"></li>
+                </ul>
             </input>
         </div>
         <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" type="text/javascript">
@@ -23,13 +26,18 @@
 		};
 		*/
 
-		new Vue ({
+		// vueInstanse.names.push('Ahan');
+
+		var vueInstanse = new Vue ({
 
 			el: '#root',
 			data: {
-				message : "Hello Shohan!"
+				message : "Hello Shohan!",
+				names : ['Shohan', 'Ayanti', 'Shampa']
 			}
 		});
         </script>
     </body>
 </html>
+
+
