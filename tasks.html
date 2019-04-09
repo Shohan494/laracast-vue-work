@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+        <meta charset="utf-8">
+        </meta>
+        <style type="text/css">
+            .color-red {
+        		color: red;
+        	}
+
+        	.isLoading {
+        		background-color: red; 
+        	}
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h2>
+                All Tasks
+            </h2>
+            <ul>
+                <li v-for="task in tasks" v-if="task.completed">
+                    {{task.description}}
+                </li>
+            </ul>
+            <h2>
+                Incompleted Tasks
+            </h2>
+            <ul>
+                <li v-for="task in incompleteTasks" v-text="task.description"></li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+            /*
+		let data = {
+			message : "Hello Shohan!"
+		};
+		*/
+
+		// vueInstanse.names.push('Ahan');
+
+		var vueInstanse = new Vue ({
+
+			el: '#root',
+			data: {
+				tasks: 
+				[
+					{description: 'Go to school', completed: true},
+					{description: 'Go to college', completed: false},
+					{description: 'Go to store', completed: true},
+					{description: 'Go to home', completed: false}
+				]
+			},
+
+			methods:
+			{
+
+			},
+
+			computed: 
+			{
+				incompleteTasks()
+				{
+					return this.tasks.filter(task => ! task.completed);
+				}
+			},
+
+			mounted()
+			{
+
+			}
+		});
+        </script>
+    </body>
+</html>
