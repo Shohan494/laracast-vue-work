@@ -11,11 +11,17 @@
   <section class="section">
     <div id="root" class="container">
 
+<!--
     <message title="Hello World" body="Lorem ipsum dolor sit amet"></message>
 
     <message title="Hello World new" body="bla bla bla"></message>
+-->
 
-    </div>
+
+    <modal v-if="showModal"></modal>
+    <button @click="showModal = true">Show Modal</button>
+
+
   </section>
 
   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" type="text/javascript"></script>
