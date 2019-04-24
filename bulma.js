@@ -38,7 +38,7 @@ Vue.component('modal',
       <P>HEY LOREM IPSUM DOLOR SIT AMET</P>
       </div>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
+    <button class="modal-close" @click="$emit('close')"></button>
     
     </div>
 `
