@@ -35,7 +35,7 @@ Vue.component('modal',
     <div class="modal-background"></div>
     <div class="modal-content">
       <div class="box">
-      <P>HEY LOREM IPSUM DOLOR SIT AMET</P>
+      <slot></slot>
       </div>
     </div>
     <button class="modal-close" @click="$emit('close')"></button>
