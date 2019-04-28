@@ -24,7 +24,8 @@
     <body>
 
         <div id="app">
-            
+
+        @{{skills}}
 
         </div>
 
